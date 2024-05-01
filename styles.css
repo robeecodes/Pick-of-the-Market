@@ -1,0 +1,102 @@
+h1, h2, h3 {
+    margin-block: 2rem;
+    font-family: "noka", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+p {
+    margin-block: 1rem;
+    font-size: 1.2rem;
+    font-family: "nobel", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+hr {
+    margin: 0;
+}
+
+img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.navbar {
+    background-color: #1f8bdf;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link.active {
+    font-weight: bold;
+}
+
+.btn {
+    --bs-btn-color: white;
+    --bs-btn-bg: #e48715;
+    --bs-btn-border-color: #e48715;
+    --bs-btn-hover-bg: #f39a2e;
+    --bs-btn-hover-border-color: #f39a2e;
+    --bs-btn-active-bg: #e48715;
+    --bs-btn-active-border-color: #e48715;
+}
+
+.hero {
+    width: 100vw;
+    position: relative;
+}
+
+.hero img, .menu img {
+    height: 85vh;
+    width: 100%;
+
+    filter: brightness(50%);
+}
+
+.hero h1 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 50%;
+
+    text-align: center;
+    font-size: clamp(40px, calc(2.5rem + ((1vw - 7.68px) * 3.4722)), 80px);
+
+    color: white;
+}
+
+.map iframe {
+    height: 85vh;
+    width: 100vw;
+}
+
+.menu {
+    background-image: image-set(
+            url("assets/img/restaurant.webp") type("image/webp"),
+            url("assets/img/restaurant.png") type("image/png")
+    );
+}
+
+.menu > div {
+    border-radius: .5rem;
+
+    background-color: rgba(255, 255, 255, 0.85);
+
+    backdrop-filter: blur(8px);
+
+    z-index: 2;
+}
+
+@media only screen and (max-width: 62em) {
+    .menu > div {
+        border-radius: 0;
+
+    }
+}
